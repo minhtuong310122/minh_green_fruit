@@ -39,3 +39,5 @@ yarn-debug.log*
 /.bundle
 /vendor/bundle
 /vendor/bin
+
+/config/application.yml
