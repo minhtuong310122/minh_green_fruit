@@ -6,11 +6,26 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="bg-nav">
+      <div class="container">
+      <%= render "layouts/header-top" %>
+      </div>
+    </div>
+    
+    <div class="border-bot"></div>
+    <div class="bg-nav">
+      <div class="container">
+      <%= render "layouts/header" %>
+      </div>
+    </div>
+    <%= render "layouts/banner" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
