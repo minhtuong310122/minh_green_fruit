@@ -1,5 +1,11 @@
 class ApplicationController < ActionController::Base
+  include SessionsHelper
+
   before_action :set_locale
+
+  def log_in(user)
+    session[:user_id] = user.id
+  end
 
   private
 
