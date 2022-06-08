@@ -16,7 +16,25 @@
         </div>
       </div>
       <form class="form-inline my-2 my-lg-0 font_family">
-          <a href="#">Login</a>&nbsp;  <span>/</span> &nbsp; <a href="#">LogOut</a>
+          <% if logged_in? %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to t(".profile"), current_user , class: "dropdown-item" %></li>
+                <li><%= link_to t(".settings"), edit_user_path(current_user), class: "dropdown-item" %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to t(".logout"), logout_path, method: :delete , class: "dropdown-item" %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to t(".login"), login_path %></li>
+            <li class="nav-link">|</li>
+            <li><%= link_to t(".signup"), signup_path %></li>
+          <% end %>
       </form>
     </ul>
   </div>
