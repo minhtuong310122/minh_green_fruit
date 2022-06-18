@@ -3,7 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.6.5"
 
+gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", ">= 1.4.4", require: false
+gem "faker", "~> 2.21"
 gem "figaro"
 gem "jbuilder", "~> 2.7"
 gem "mysql2", "~> 0.5"

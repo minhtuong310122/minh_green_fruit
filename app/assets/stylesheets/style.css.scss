@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 $color-focus: #fff;
+$color-black: #000;
 
 .border-bot {
 	border-bottom: 1px solid #fff;
+}
+
+.mt-40 {
+  margin-top: 40px;
 }
 
 /* header */
@@ -27,12 +32,16 @@ $color-focus: #fff;
 }
 
 .nav-link:hover {
-  color: #000 !important;
+  color: $color-black !important;
 }
 
 .nav-link-line {
 	padding: 0.5rem 0;
-	color: #000;
+	color: $color-black;
+}
+
+.cl-black {
+  color: $color-black !important;
 }
 
 .btn-cart {
@@ -63,6 +72,13 @@ $color-focus: #fff;
 	color: $color-focus;
 }
 
+.dropdown-menu {
+  .translation_missing {
+    color: black !important;
+  }
+}
+
+
 .header_top {
 	justify-content: space-between;
 	.header_top_left {
@@ -76,6 +92,32 @@ $color-focus: #fff;
 			margin-bottom: 0;
 		}
 	}
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  .form-control {
+    color: red;
+  }
 }
 
 /* content */
@@ -221,6 +263,7 @@ sub {
   display: flex;
   justify-content: center;
   padding: 15px;
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 950px) {

@@ -10,6 +10,7 @@ import 'channels'
 import 'bootstrap'
 
 require('jquery')
+require('packs/admin')
 
 Rails.start()
 Turbolinks.start()
