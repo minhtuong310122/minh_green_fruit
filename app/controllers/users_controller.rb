@@ -17,21 +17,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # def edit; end
-
-  # def update
-  #    if @user.update user_params
-  #      redirect_to @user
-  #    else
-  #      render :edit
-  #    end
-  #  end
-
-  #  def destroy
-  #    User.find(params[:id]).destroy
-  #    redirect_to users_url
-  #  end
-
   private
 
   def user_params
