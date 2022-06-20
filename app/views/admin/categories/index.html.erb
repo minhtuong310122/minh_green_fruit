@@ -1,1 +1,27 @@
-Day la category
+<h2>List Category</h2>
+<%= link_to "<button>New</button>".html_safe, new_admin_category_path %>
+<table style="width:100%">
+	<tr>
+		<th>id</th>
+		<th>Name</th>
+		<th>Action</th>
+	</tr>
+	<% @categories.map do |category| %>
+		<tr>
+			<td><%= category.id %></td>
+			<td><%= category.name %></td>
+			<td>
+				<%= link_to "<button class='btn btn-info'>Edit</button>".html_safe, edit_admin_category_path(category) %>
+				<%= link_to "<button class='btn btn-danger'>Delete</button>".html_safe, admin_category_path(category), method: :delete %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+<style>
+table {
+	margin-top: 10px;
+}
+th, td {
+  border:1px solid black;
+}
+</style>

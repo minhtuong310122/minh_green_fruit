@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root "home#index"
 
-    resources :categories
+    resources :categories, except: :show
   end
 end
