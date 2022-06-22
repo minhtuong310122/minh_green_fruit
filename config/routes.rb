@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     root "home#index"
 
     resources :categories, except: :show
+    resources :products
   end
 end

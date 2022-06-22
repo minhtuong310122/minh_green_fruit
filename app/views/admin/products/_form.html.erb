@@ -1,0 +1,9 @@
+<%= form_for product, url: url , method: method do |f| %>
+  Name: <%= f.text_field :name, class: "form-control" %><br />
+  Price: <%= f.text_field :price, class: "form-control" %><br />
+  Quantity: <%= f.text_field :quantity, class: "form-control" %><br />
+  Category: <%= f.select :category_id, Category.options_for_select %><br />
+  Description: <%= f.text_field :description, class: "form-control" %><br />
+  Image: <%= f.text_field :image, class: "form-control" %><br />
+  <%= f.submit %>
+<% end %>
